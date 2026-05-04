@@ -36,8 +36,34 @@
 </map>
 
 <div class="body-text">
-<p>Email: contact@flatearthforum.com</p>
+
+<form onsubmit="showMessage(event)">
+    
+<label>Name:</label><br>
+<input type="text" required><br><br>
+
+<label>Email:</label><br>
+<input type="email" required><br><br>
+
+<label>Message:</label><br>
+<textarea rows="5" required></textarea><br><br>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<p id="confirmation" style="display:none; color:green; margin-top:10px;">
+Message sent successfully!
+</p>
+
 </div>
+
+<script>
+function showMessage(event){
+event.preventDefault();
+document.getElementById("confirmation").style.display = "block";
+}
+</script>
 
 </div>
 </div>
